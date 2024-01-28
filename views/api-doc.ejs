@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+</head>
+
+<body>
+    <h1>
+        scienox-backend-nodejs
+    </h1>
+    <h3>
+        Backend server is running.
+        <br>
+        View the complete API documentation
+        <a href="https://documenter.getpostman.com/view/26608704/2s93eU1ttn" target="_blank">here</a>.
+    </h3>
+
+    <br>
+
+    <h3>Available API endpoints</h3>
+
+    <pre>
+<b>User login and registration</b>
+- POST    /auth/register
+- POST    /auth/login
+
+<b>User management</b>
+- POST    /users/create-user
+- GET     /users/get-users
+- GET     /users/get-user/{userType}/{userId}
+- PUT     /users/update-user/{userType}/{userId}
+- DELETE  /users/delete-user/{userType}/{userId}
+
+<b>Course management</b>
+- POST    /course/create-course
+- GET     /course/get-courses
+- GET     /course/get-course/{courseId}
+- PUT     /course/update-course/{courseId}
+- DELETE  /course/delete-course/{courseId}
+
+<b>Course enrollment</b>
+- POST    /course/enroll-course/{courseId}
+- POST    /course/unenroll-course/{courseId}
+
+<b>Lecture management</b>
+- POST    /lectures/create-lecture
+- GET     /lectures/get-lectures
+- GET     /lectures/get-lecture/{lectureId}
+- PUT     /lectures/update-lecture/{lectureId}
+- DELETE  /lectures/delete-lecture/{lectureId}
+
+<b>Upload lecture files</b>
+- POST    /lectures/upload-lecture-file/{lectureId}
+    </pre>
+</body>
+
+</html>
