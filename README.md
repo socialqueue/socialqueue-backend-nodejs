@@ -76,10 +76,6 @@ shares  BIGINT  DEFAULT(0) \
 engagementMetrics   BIGINT  DEFAULT(0) \
 postId  BIGINT  NOT NULL    FOREIGN KEY REFERENCES(posts)
 
-
-
-
-
 ---
 ---
 
@@ -128,5 +124,4 @@ Port `13354`
 User `default`
 
 Password `AVNS__lZyx5t-OzgDg3WkYKX`
-
 

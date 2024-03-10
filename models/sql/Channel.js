@@ -13,10 +13,30 @@ const Channel = sequelize.define('channel', {
     type: DataTypes.STRING,
     allowNull: false
   },
-  accessToken: {
+  access_token: {
+    type: DataTypes.STRING(500),
+    allowNull: false
+  },
+  expires_in: {
+    type: DataTypes.BIGINT,
+    allowNull: false
+  },
+  scope: {
     type: DataTypes.STRING,
     allowNull: false
   },
+  token_type: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  id_token: {
+    type: DataTypes.STRING(2000),
+    allowNull: false
+  },
+  valid_till: {
+    type: DataTypes.DATE,
+    allowNull: false
+  }
 }, {
   indexes: [
     // { unique: true, fields: ['id'] },

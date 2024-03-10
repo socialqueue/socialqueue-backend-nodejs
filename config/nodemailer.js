@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
         user: "bc582d0cae8480",
         pass: "64a5d713e9b698"
     },
-});
+})
 
 
 export default transporter

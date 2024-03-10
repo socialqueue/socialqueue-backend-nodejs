@@ -22,7 +22,10 @@ const sequelizeConnect = async () => {
         await sequelize.authenticate()
         console.log("MySQL connection successful")
 
-        await sequelize.sync({ alter: true })
+        await sequelize.sync({
+            alter: true,
+            // force: true
+        })
         console.log("MySQL database synced")
     }
     catch (err) {

@@ -5,6 +5,7 @@ import User from "../models/sql/User.js"
 import Channel from "../models/sql/Channel.js"
 import Post from "../models/sql/Post.js"
 import PostAnalytic from "../models/sql/PostAnalytic.js"
+import UserLogin from "../models/sql/UserLogin.js"
 
 
 // One    User       has    many    Channel.
@@ -25,24 +26,32 @@ const sequelizeInit = () => {
         foreignKey: {
             type: DataTypes.BIGINT,
         }
-    });
-    Channel.belongsTo(User);
+    })
+    Channel.belongsTo(User)
+
+
+    User.hasMany(UserLogin, {
+        foreignKey: {
+            type: DataTypes.BIGINT,
+        }
+    })
+    UserLogin.belongsTo(User)
 
 
     Channel.hasMany(Post, {
         foreignKey: {
             type: DataTypes.BIGINT,
         }
-    });
-    Post.belongsTo(Channel);
+    })
+    Post.belongsTo(Channel)
 
 
     Post.hasOne(PostAnalytic, {
         foreignKey: {
             type: DataTypes.BIGINT,
         }
-    });
-    PostAnalytic.belongsTo(Post);
+    })
+    PostAnalytic.belongsTo(Post)
 }
 
 
