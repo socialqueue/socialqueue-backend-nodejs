@@ -15,7 +15,7 @@ const router = express.Router()
 router.get("/", getUserChannels)
 
 
-router.get("/userInfo", getUserInfo)
+router.get("/get-user-info", getUserInfo)
 
 
 router.post("/new/linkedin/request-access-token", postLinkedinRequestAccessToken)
